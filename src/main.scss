@@ -1,0 +1,9 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'resets.scss';
+
+body {
+	font-size: 32px;
+	font-family: $Ff-primary;
+	background-color: rgb(255, 221, 0);
+}
