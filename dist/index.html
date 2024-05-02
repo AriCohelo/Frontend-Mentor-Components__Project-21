@@ -13,6 +13,66 @@
 		/>
 	</head>
 	<body>
+		<article class="ageCalcApp">
+			<form novalidate action="#" class="ageCalcApp__form" name="dateForm">
+				<label
+					for="day"
+					class="ageCalcApp__form-dayLabel ageCalcApp__form-label"
+					>DAY</label
+				>
+				<label
+					for="month"
+					class="ageCalcApp__form-monthLabel ageCalcApp__form-label"
+					>MONTH</label
+				>
+				<label
+					for="year"
+					class="ageCalcApp__form-yearLabel ageCalcApp__form-label"
+					>YEAR</label
+				>
+				<input
+					id="day"
+					type="text"
+					placeholder="DD"
+					class="ageCalcApp__form-dayInput ageCalcApp__form-input"
+				/>
+				<input
+					id="month"
+					type="text"
+					placeholder="MM"
+					class="ageCalcApp__form-monthInput ageCalcApp__form-input"
+				/>
+				<input
+					id="year"
+					type="text"
+					placeholder="YYYY"
+					class="ageCalcApp__form-yearInput ageCalcApp__form-input"
+				/>
+				<p class="ageCalcApp__form-dayInput-error ageCalcApp__form-error">
+					Must be a valid day
+				</p>
+				<p class="ageCalcApp__form-monthInput-error ageCalcApp__form-error">
+					Must be a valid month
+				</p>
+				<p class="ageCalcApp__form-yearInput-error ageCalcApp__form-error">
+					Must be a valid year
+				</p>
+			</form>
+			<div class="ageCalcApp__arrowCircle-container">
+				<div class="ageCalcApp__arrowCircle">
+					<img src="../src/images/icon-arrow.svg" alt="arrow" />
+				</div>
+			</div>
+			<p class="ageCalcApp__resultYears results">
+				<span class="ageCalcApp__resultYears-highlight">--</span>years
+			</p>
+			<p class="ageCalcApp__resultMonths results">
+				<span class="ageCalcApp__resultMonths-highlight">--</span>months
+			</p>
+			<p class="ageCalcApp__resultDays results">
+				<span class="ageCalcApp__resultDays-highlight">--</span>days
+			</p>
+		</article>
 		<script src="bundle.js"></script>
 	</body>
 </html>
