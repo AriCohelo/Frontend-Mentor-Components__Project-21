@@ -6,10 +6,10 @@ body {
 	font-size: 32px;
 	font-family: $Ff-primary;
 	background-color: $Clr-neutral-off-white;
-	height: 100vh;
 	display: grid;
 	place-items: center;
 	place-content: center;
+	padding: 10rem;
 }
 .ageCalcApp {
 	background-color: $Clr-neutral-white;
@@ -18,9 +18,10 @@ body {
 	padding: 3.5rem;
 	&__form {
 		display: grid;
-		grid-template-columns: repeat(3, 10rem);
+		grid-template-columns: repeat(4, 10rem);
 		grid-column-gap: 2rem;
 		margin-bottom: 3rem;
+		border-bottom: 2px solid $Clr-neutral-light-grey;
 		&-label {
 			font-size: 0.875rem;
 			font-weight: $Fw-bold;
@@ -35,6 +36,18 @@ body {
 			color: $Clr-neutral-off-black;
 			font-weight: $Fw-bold;
 			outline: none;
+			grid-row: 2;
+			//
+			// REVIEW
+			//
+			-moz-appearance: textfield;
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+			//
+			//REVIEW
+			//
 			&::placeholder {
 				opacity: 1;
 				color: $Clr-neutral-off-black;
@@ -44,30 +57,31 @@ body {
 				border: 1px solid $Clr-neutral-smokey-grey;
 			}
 		}
+		&-submitButton {
+			background-color: $Clr-accent-purple;
+			width: 6rem;
+			height: 6rem;
+			border-radius: 50%;
+			display: grid;
+			place-content: center;
+			border: none;
+			margin-bottom: -3rem;
+			grid-row: 3;
+			grid-column-start: 4;
+			justify-self: flex-end;
+			margin-right: 0.7rem;
+			&:hover {
+				background-color: $Clr-neutral-off-black;
+				cursor: pointer;
+			}
+		}
 		&-error {
-			// display: none;
+			display: none;
 			margin-top: 0.5rem;
 			font-size: 0.875rem;
 			color: $Clr-accent-light-red;
 			font-style: italic;
-		}
-	}
-	&__arrowCircle {
-		&-container {
-			display: grid;
-			place-content: flex-end;
-			border-top: 2px solid $Clr-neutral-light-grey;
-		}
-		display: grid;
-		place-content: center;
-		margin-top: -3rem;
-		background-color: $Clr-accent-purple;
-		width: 6rem;
-		height: 6rem;
-		border-radius: 50%;
-		&:hover {
-			background-color: $Clr-neutral-off-black;
-			cursor: pointer;
+			grid-row: 3;
 		}
 	}
 	&__resultYears,

@@ -33,18 +33,28 @@
 				<input
 					id="day"
 					type="text"
+					inputmode="numeric"
+					min="1"
+					max="31"
 					placeholder="DD"
 					class="ageCalcApp__form-dayInput ageCalcApp__form-input"
 				/>
 				<input
 					id="month"
-					type="text"
+					type="number"
+					inputmode="numeric"
+					pattern="[0-9]*"
+					min="1"
+					max="12"
 					placeholder="MM"
 					class="ageCalcApp__form-monthInput ageCalcApp__form-input"
 				/>
 				<input
 					id="year"
-					type="text"
+					type="number"
+					inputmode="numeric"
+					pattern="[0-9]*"
+					min="1"
 					placeholder="YYYY"
 					class="ageCalcApp__form-yearInput ageCalcApp__form-input"
 				/>
@@ -57,6 +67,9 @@
 				<p class="ageCalcApp__form-yearInput-error ageCalcApp__form-error">
 					Must be a valid year
 				</p>
+				<button class="ageCalcApp__form-submitButton">
+					<img src="../src/images/icon-arrow.svg" alt="arrow" />
+				</button>
 			</form>
 			<div class="ageCalcApp__arrowCircle-container">
 				<div class="ageCalcApp__arrowCircle">
